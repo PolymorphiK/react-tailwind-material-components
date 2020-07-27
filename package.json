@@ -17,7 +17,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    
+    "build:tailwind": "postcss build css/tailwind.css -o src/tailwind.css",
+    "prestart": "npm run build:tailwind",
+    "prebuild": "npm run build:tailwind",
+    "watch:tailwind": "postcss build css/tailwind.css -o src/tailwind.css --watch"
   },
   "eslintConfig": {
     "extends": "react-app"
