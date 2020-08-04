@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
+
+input.md-input {
+    @apply w-full h-full bg-gray-600 bg-opacity-25 px-2 pt-3 pb-1 text-sm rounded-b-none rounded-t border-b border-black;
+}
+
+input.md-input:focus {
+    caret-color: #9f7aea;
+    @apply outline-none;
+}
+
+label.md-input-label {
+    @apply absolute left-0 w-full h-full inline-flex items-center pointer-events-none px-2;
+}
+
+.md-input-label-inner {
+    @apply transform origin-top-left duration-150;
+}
+
+.md-input-label-inner__focus {
+    transform: scale(0.75) translateY(-50%);
+    @apply absolute duration-150;
+}
+
+input.md-input:focus ~ label span.md-input-label-inner {
+    @apply md-input-label-inner__focus text-purple-500;
+}
+
+input.md-input:valid ~ label span.md-input-label-inner {
+    @apply md-input-label-inner__focus;
+}
+
+div.md-input-underline {
+    bottom: 0.5px;
+    height: 2px;
+    @apply absolute w-full bg-purple-500 transform scale-x-0 duration-150;
+}
+
+input.md-input:focus ~ div.md-input-underline {
+    @apply transform scale-x-100 duration-150;
+}
+
 @tailwind utilities;

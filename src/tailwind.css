@@ -605,6 +605,112 @@ video {
   }
 }
 
+input.md-input {
+  width: 100%;
+  height: 100%;
+  --bg-opacity: 1;
+  background-color: #718096;
+  background-color: rgba(113, 128, 150, var(--bg-opacity));
+  --bg-opacity: 0.25;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-width: 1px;
+  --border-opacity: 1;
+  border-color: #000;
+  border-color: rgba(0, 0, 0, var(--border-opacity));
+}
+
+input.md-input:focus {
+  caret-color: #9f7aea;
+  outline: 0;
+}
+
+label.md-input-label {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  pointer-events: none;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.md-input-label-inner {
+  --transform-translate-x: 0;
+  --transform-translate-y: 0;
+  --transform-rotate: 0;
+  --transform-skew-x: 0;
+  --transform-skew-y: 0;
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+  transform-origin: top left;
+  transition-duration: 150ms;
+}
+
+.md-input-label-inner__focus {
+  transform: scale(0.75) translateY(-50%);
+  position: absolute;
+  transition-duration: 150ms;
+}
+
+input.md-input:focus ~ label span.md-input-label-inner {
+  transform: scale(0.75) translateY(-50%);
+  position: absolute;
+  transition-duration: 150ms;
+  --text-opacity: 1;
+  color: #9f7aea;
+  color: rgba(159, 122, 234, var(--text-opacity));
+}
+
+input.md-input:valid ~ label span.md-input-label-inner {
+  transform: scale(0.75) translateY(-50%);
+  position: absolute;
+  transition-duration: 150ms;
+}
+
+div.md-input-underline {
+  bottom: 0.5px;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  --bg-opacity: 1;
+  background-color: #9f7aea;
+  background-color: rgba(159, 122, 234, var(--bg-opacity));
+  --transform-translate-x: 0;
+  --transform-translate-y: 0;
+  --transform-rotate: 0;
+  --transform-skew-x: 0;
+  --transform-skew-y: 0;
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+  --transform-scale-x: 0;
+  transition-duration: 150ms;
+}
+
+input.md-input:focus ~ div.md-input-underline {
+  --transform-translate-x: 0;
+  --transform-translate-y: 0;
+  --transform-rotate: 0;
+  --transform-skew-x: 0;
+  --transform-skew-y: 0;
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+  --transform-scale-x: 1;
+  transition-duration: 150ms;
+}
+
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
