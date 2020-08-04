@@ -5,7 +5,7 @@ import TextField from './material/TextField';
 function App() {
   return (
     <div className="p-20">
-      <TextField />
+      <TextField label="First Name" />
     </div>
   );
 }

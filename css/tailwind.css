@@ -2,7 +2,15 @@
 @tailwind components;
 
 input.md-input {
-    @apply w-full h-full bg-gray-600 bg-opacity-25 px-2 pt-3 pb-1 text-sm rounded-b-none rounded-t border-b border-black;
+    @apply w-full h-full bg-gray-500 bg-opacity-25 px-3 pt-3 pb-1 text-sm rounded-b-none rounded-t border-b border-black border-opacity-25;
+}
+
+input.md-input:hover {
+    @apply bg-opacity-50 border-opacity-75;
+}
+
+input.md-input:active {
+    @apply bg-opacity-75 border-opacity-100;
 }
 
 input.md-input:focus {
@@ -11,7 +19,7 @@ input.md-input:focus {
 }
 
 label.md-input-label {
-    @apply absolute left-0 w-full h-full inline-flex items-center pointer-events-none px-2;
+    @apply absolute left-0 w-full h-full inline-flex items-center pointer-events-none px-3;
 }
 
 .md-input-label-inner {
@@ -32,7 +40,7 @@ input.md-input:valid ~ label span.md-input-label-inner {
 }
 
 div.md-input-underline {
-    bottom: 0.5px;
+    bottom: 0.0px;
     height: 2px;
     @apply absolute w-full bg-purple-500 transform scale-x-0 duration-150;
 }

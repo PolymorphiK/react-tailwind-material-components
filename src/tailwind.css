@@ -609,11 +609,11 @@ input.md-input {
   width: 100%;
   height: 100%;
   --bg-opacity: 1;
-  background-color: #718096;
-  background-color: rgba(113, 128, 150, var(--bg-opacity));
+  background-color: #a0aec0;
+  background-color: rgba(160, 174, 192, var(--bg-opacity));
   --bg-opacity: 0.25;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   padding-top: 0.75rem;
   padding-bottom: 0.25rem;
   font-size: 0.875rem;
@@ -625,6 +625,17 @@ input.md-input {
   --border-opacity: 1;
   border-color: #000;
   border-color: rgba(0, 0, 0, var(--border-opacity));
+  --border-opacity: 0.25;
+}
+
+input.md-input:hover {
+  --bg-opacity: 0.5;
+  --border-opacity: 0.75;
+}
+
+input.md-input:active {
+  --bg-opacity: 0.75;
+  --border-opacity: 1;
 }
 
 input.md-input:focus {
@@ -640,8 +651,8 @@ label.md-input-label {
   display: inline-flex;
   align-items: center;
   pointer-events: none;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .md-input-label-inner {
@@ -679,7 +690,7 @@ input.md-input:valid ~ label span.md-input-label-inner {
 }
 
 div.md-input-underline {
-  bottom: 0.5px;
+  bottom: 0.0px;
   height: 2px;
   position: absolute;
   width: 100%;
